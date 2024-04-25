@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  armas_backend:
+    image: armas_backend_fastapi_image:latest
+    container_name: armas_backend_fastapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./src:/app/src
+    env_file:
+      - .env 
+    command: uvicorn src.main:app --reload --host 0.0.0.0 --port 8082
