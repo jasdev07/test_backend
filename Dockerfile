@@ -11,7 +11,6 @@ COPY environment.yml /app/environment.yml
 RUN conda env create -f /app/environment.yml 
 
 # Make sure the environment is activated:
-# It is good practice to use absolute paths to the executables to avoid any issues with the $PATH
 ENV PATH /opt/conda/envs/armas/bin:$PATH
 
 # Install the requirements using pip (if any)

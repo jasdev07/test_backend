@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  armas_backend:
-    image: armas_backend_fastapi_image:latest
-    container_name: armas_backend_fastapi
+  backend:
+    image: backend_fastapi_image:latest
+    container_name: backend_fastapi
     build:
       context: .
       dockerfile: Dockerfile
